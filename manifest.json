@@ -13,7 +13,6 @@
   "permissions": ["storage"],
   "host_permissions": ["https://petition.president.gov.ua/*"],
   "action":{
-      "default_popup": "index.html",
       "default_title": "Остання відкрита електронна петиція"
   },
   "content_scripts": [

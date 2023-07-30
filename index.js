@@ -38,6 +38,15 @@ const redirectToLastVisitedPetition = (petitionId) => {
  * - If the current page is a petition page and has a valid petition ID, stores it as the last visited petition ID.
  */
 const initialize = () => {
+  if ("navigation" in window) {
+    const { currentEntry } = window.navigation;
+    if (currentEntry) {
+      if (currentEntry.index !== 0) {
+        return;
+      }
+    }
+  }
+  
   const { search, pathname } = location;
   const queryParams = new URLSearchParams(search);
 
