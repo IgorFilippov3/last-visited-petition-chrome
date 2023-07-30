@@ -1,0 +1,19 @@
+{
+  "name": "Остання відкрита електронна петиція",
+  "version": "1.0.0",
+  "description": "Розширення для того щоб після логіну перейти до останньої відкритої петиції",
+  "manifest_version": 3,
+  "author": "Ihor Filippov",
+  "permissions": ["storage"],
+  "host_permissions": ["https://petition.president.gov.ua/*"],
+  "action":{
+      "default_popup": "index.html",
+      "default_title": "Остання відкрита електронна петиція"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://petition.president.gov.ua/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
